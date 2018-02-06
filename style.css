@@ -1,3 +1,7 @@
-div {
+/* div {
   border: solid black 2px;
+} */
+
+.thumbnail {
+  cursor: pointer
 }

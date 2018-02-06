@@ -12,7 +12,7 @@ var VideoModel = Backbone.Model.extend({
       return {
         title: data.snippet.title,
         description: data.snippet.description,
-        thumbnailUrl: data.snippet.thumbnails.default.url, //do we need other default thumbnail attributes?
+        thumbnailUrl: data.snippet.thumbnails.high.url,
         videoUrl: `https://www.youtube.com/embed/${data.id.videoId}`,
       }
   }

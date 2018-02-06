@@ -11,6 +11,7 @@ var AppView = Backbone.View.extend({
     this.$thumbnails = $('#thumbnails-container');
     this.listenTo(this.model.get('videos'), 'add', this.renderVideos);
     this.listenTo(this.model.get('videos'), 'change:mainVideo', this.render);
+    this.listenTo(this.model.get('searchTerm'))
     //run search function with default terms on load
     this.search('junior%20bulldog')
   },

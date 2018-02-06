@@ -1,5 +1,5 @@
 var VideoView = Backbone.View.extend({
-  className: 'align-middle',
+  className: 'row p-1 thumbnail',
   events:{
     //listen for clicks on thumbnail. when clicked, set mainVideo to true. find previous mainVideo and set to false.
     'click': 'changeMainVideo'

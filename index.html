@@ -12,26 +12,29 @@
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
   </head>
   <body>
+
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <div class="m-4">
-            <input type="text" class="w-100" id="search" placeholder="Enter search term" value="dogs">
+            <input type="text" class="w-100" id="search" placeholder="Enter search term">
             <!-- <button type="button" class="btn btn-primary" id="search-button">Search</button> -->
           </div>
         </div>
 
       </div>
       <div class="row m-5">
-        <div class="col" id="videos-container"></div>
-        <div class="col" id="thumbnails-container"></div>
+        <div class="col-md-8" id="videos-container"></div>
+        <div class="col-md-4" id="thumbnails-container"></div>
       </div>
 
     </div>
     <!-- video template -->
     <script id="main-video-template" type="text/x-handlebars">
 
-      <iframe id="ytplayer" type="text/html" width="640" height="360" src={{videoUrl}} frameborder="0"></iframe>
+      <div class="embed-responsive embed-responsive-16by9">
+      <iframe id="ytplayer" type="text/html" class="embed-responsive-item" src={{videoUrl}} frameborder="0"></iframe>
+    </div>
       <div id="video-info">
         <p id="video-title">{{title}}</p>
         <p id="video-description">{{description}}</p>
@@ -41,7 +44,9 @@
     </script>
     <!-- include all videos except main -->
     <script id="thumbnail-template" type="text/x-handlebars">
-      <img src={{thumbnailUrl}}><p class="m-2">{{title}}</p>
+      <div class="col"><img class="img-fluid" src={{thumbnailUrl}}></div>
+      <div class="col"><p class="align-middle">{{title}}</p></div>
+
     </script>
 
     <script src="models/AppModel.js"></script>
