@@ -13,7 +13,6 @@ var VideoView = Backbone.View.extend({
   template: Handlebars.compile($('#thumbnail-template').html()),
 
   removeVideoView: function(){
-    console.log('removed')
     this.remove();
   },
   render: function(){
@@ -30,7 +29,7 @@ var VideoView = Backbone.View.extend({
   },
 
   changeMainVideo: function(){
-    //first, change existing mainVideo to false
+    //first, change existing mainVideo to false, if a mainVideo exists
     var currentMainVideo = appModel.get('videos').findWhere({mainVideo:true})
       if (currentMainVideo){
       currentMainVideo.set('mainVideo', false);

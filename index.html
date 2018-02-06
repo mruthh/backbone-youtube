@@ -18,7 +18,6 @@
         <div class="col-md-6 offset-md-3">
           <div class="m-4">
             <input type="text" class="w-100" id="search" placeholder="Enter search term">
-            <!-- <button type="button" class="btn btn-primary" id="search-button">Search</button> -->
           </div>
         </div>
 
@@ -33,20 +32,22 @@
     <script id="main-video-template" type="text/x-handlebars">
 
       <div class="embed-responsive embed-responsive-16by9">
-      <iframe id="ytplayer" type="text/html" class="embed-responsive-item" src={{videoUrl}} frameborder="0"></iframe>
+      <iframe id="ytplayer" type="text/html" class="embed-responsive-item" src={{videoUrl}}></iframe>
     </div>
       <div id="video-info">
         <p id="video-title">{{title}}</p>
         <p id="video-description">{{description}}</p>
-
       </div>
-
     </script>
-    <!-- include all videos except main -->
+
     <script id="thumbnail-template" type="text/x-handlebars">
       <div class="col"><img class="img-fluid" src={{thumbnailUrl}}></div>
       <div class="col"><p class="align-middle">{{title}}</p></div>
+    </script>
 
+    <script id="error-template" type="text/x-handlebars">
+      <p class="text-center">There were no results for <strong>{{searchTerm}}</strong>. Please try another search.</p>
+      <img class="mw-100" src="http://3.bp.blogspot.com/-2-tKmH3D3t0/UcGIrbR2KXI/AAAAAAAACYQ/Cn78pWWv8WE/s1600/YouTube+Video+error.jpg">
     </script>
 
     <script src="models/AppModel.js"></script>
