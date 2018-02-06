@@ -22,7 +22,7 @@
         </div>
 
       </div>
-      <div class="row">
+      <div class="row m-5">
         <div class="col" id="videos-container"></div>
         <div class="col" id="thumbnails-container"></div>
       </div>
@@ -31,7 +31,7 @@
     <!-- video template -->
     <script id="main-video-template" type="text/x-handlebars">
 
-      <iframe id="ytplayer" type="text/html" width="640" height="360" src={{videoUrl} }="}" frameborder="0"></iframe>
+      <iframe id="ytplayer" type="text/html" width="640" height="360" src={{videoUrl}} frameborder="0"></iframe>
       <div id="video-info">
         <p id="video-title">{{title}}</p>
         <p id="video-description">{{description}}</p>
@@ -41,7 +41,7 @@
     </script>
     <!-- include all videos except main -->
     <script id="thumbnail-template" type="text/x-handlebars">
-      <p class="m-2"><img src={{thumbnailUrl} }="}">{{title}}</p>
+      <img src={{thumbnailUrl}}><p class="m-2">{{title}}</p>
     </script>
 
     <script src="models/AppModel.js"></script>
